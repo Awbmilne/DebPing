@@ -1,0 +1,14 @@
+[Unit]
+Description=RasPing Service File
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u RasPing.py
+WorkingDirectory=/mnt/c/Users/Will/Documents/WILL_FLASH_files/GitHub_Repos/RasPing
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
